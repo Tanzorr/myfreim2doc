@@ -16,7 +16,7 @@ class DB
 
 
         try {
-            $this->_pdo = new PDO("mysql:host=localhost;dbname=myfreim", "root", "root");
+            $this->_pdo = new PDO("mysql:host=db;dbname=myfreim", "root", "root");
             $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->_pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
            
