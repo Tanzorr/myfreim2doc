@@ -17,7 +17,7 @@ if(!Session::exist(CURRENT_USER_SESSION_NAME) && Cookie::exists(REMEMBER_ME_COOK
     User::loginUserFromCooke();
 }
 
-var_dump($_SERVER['HTTP_HOST']);
+
 
 Router::route($url);
 
