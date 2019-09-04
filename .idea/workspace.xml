@@ -15,9 +15,13 @@
       <change afterPath="$PROJECT_DIR$/../forlaravel/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../forlaravel/docker-compose.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../forlaravel/web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/app/views/contacts/add.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/app/views/contacts/partials/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/start-container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/xdebug.ini" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pro_dir/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pro_dir/adminer/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pro_dir/db/Dockerfile" afterDir="false" />
@@ -29,7 +33,11 @@
       <change beforePath="$PROJECT_DIR$/../DockerWordpress/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DockerWordpress/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose-lamp" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose-lamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/php/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/app/controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/app/controllers/ContactsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/core/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/core/View.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,54 +49,60 @@
     <session id="-227775024">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="6" />
           <entry key="project.open.time.7" value="6" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="2" />
+          <entry key="Dockerfile" value="8" />
           <entry key="gitignore" value="1" />
           <entry key="htaccess" value="2" />
+          <entry key="ini" value="3" />
           <entry key="json" value="1" />
-          <entry key="php" value="6" />
-          <entry key="yml" value="2" />
+          <entry key="php" value="20" />
+          <entry key="start-container" value="1" />
+          <entry key="yml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dockerfile" value="2" />
+          <entry key="Dockerfile" value="8" />
+          <entry key="Ini" value="3" />
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="6" />
+          <entry key="PHP" value="20" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="YAML" value="2" />
+          <entry key="XML" value="1" />
+          <entry key="YAML" value="5" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Dockerfile" value="134" />
+          <entry key="Dockerfile" value="200" />
           <entry key="gitignore" value="11" />
           <entry key="htaccess" value="2" />
-          <entry key="php" value="299" />
-          <entry key="yml" value="344" />
+          <entry key="php" value="395" />
+          <entry key="yml" value="349" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dockerfile" value="134" />
-          <entry key="PHP" value="299" />
+          <entry key="Dockerfile" value="200" />
+          <entry key="PHP" value="395" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="YAML" value="344" />
+          <entry key="YAML" value="349" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
@@ -96,34 +110,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="405">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/core/DB.php">
+        <entry file="file:///var/www/vhosts/cryptassets2thematic.net/public/install.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="450">
+              <caret line="37" column="107" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="107" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/app/controllers/ContactsController.php">
+        <entry file="file://$PROJECT_DIR$/php/Dockerfile">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/app/views/layouts/main_manu.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///var/www/vhosts/cryptassets2thematic.net/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180" />
+            <state relative-caret-position="90">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/app/views/contacts/add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/core/Router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/core/Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/app/views/layouts/main_manu.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -142,10 +190,19 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/php/config/config.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/php/core/DB.php" />
+        <option value="$PROJECT_DIR$/php/core/Model.php" />
+        <option value="$PROJECT_DIR$/php/php.ini" />
+        <option value="$PROJECT_DIR$/php/xdebug.ini" />
+        <option value="$PROJECT_DIR$/php/start-container" />
+        <option value="$PROJECT_DIR$/php/index.php" />
+        <option value="$PROJECT_DIR$/php/app/controllers/ContactsController.php" />
+        <option value="$PROJECT_DIR$/php/app/views/contacts/add.php" />
+        <option value="$PROJECT_DIR$/php/app/views/contacts/partials/form.php" />
+        <option value="$PROJECT_DIR$/php/core/View.php" />
+        <option value="$PROJECT_DIR$/php/info.php" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/php/Dockerfile" />
-        <option value="$PROJECT_DIR$/php/core/DB.php" />
-        <option value="$PROJECT_DIR$/php/index.php" />
       </list>
     </option>
   </component>
@@ -155,9 +212,25 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" max_simultaneous_connections="2" />
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server host="localhost" id="dfe0dae2-42d1-428f-92dd-c620c6908b47" name="docker-server" port="8088" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/php" remote-root="/home/alexx/Desktop/Docker/mylamp/php" />
+          <mapping local-root="$PROJECT_DIR$/php/app" remote-root="/var/www/html" />
+          <mapping local-root="$PROJECT_DIR$/php/app/views/contacts" remote-root="/home/alexx/Desktop/Docker/mylamp/php/app/views/contacts" />
+        </path_mappings>
+      </server>
+      <server host="localhost" id="f39d6444-2508-4e16-be45-f537e2717676" name="localhost" />
+    </servers>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/php" />
+    </include_path>
+  </component>
+  <component name="PhpXdebugProxy" ide_key="docker" host="localhost" port="9000" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="372" />
     <option name="y" value="34" />
@@ -170,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,43 +257,21 @@
             </path>
             <path>
               <item name="mylamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylamp" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylamp" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylamp" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylamp" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../docker-example/moe-php-mysql-demo/Dockerfile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ms18bthematic.net/php/Dockerfile" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -239,6 +289,14 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="docker-server" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="docker-server" session_id="docer">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="docker-server">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -263,12 +321,24 @@
       <workItem from="1567505326473" duration="1686000" />
       <workItem from="1567507891425" duration="1829000" />
       <workItem from="1567510254939" duration="1145000" />
-      <workItem from="1567512064194" duration="599000" />
+      <workItem from="1567512064194" duration="1444000" />
+      <workItem from="1567514118012" duration="1793000" />
+      <workItem from="1567515931011" duration="1792000" />
+      <workItem from="1567517747558" duration="1793000" />
+      <workItem from="1567519559476" duration="1794000" />
+      <workItem from="1567521372213" duration="859000" />
+      <workItem from="1567523190763" duration="615000" />
+      <workItem from="1567594851359" duration="936000" />
+      <workItem from="1567596662714" duration="2026000" />
+      <workItem from="1567599099091" duration="1817000" />
+      <workItem from="1567600942068" duration="1402000" />
+      <workItem from="1567602443287" duration="26000" />
+      <workItem from="1567610658498" duration="1200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17064000" />
+    <option name="totallyTimeSpent" value="33962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -282,21 +352,21 @@
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28745162" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20342731" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997236" weight="0.39958158" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294979" />
-      <window_info anchor="bottom" id="Docker" order="7" weight="0.32845187" />
+      <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.498618" weight="0.32845187" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32845187" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4991708" visible="true" weight="0.32740587" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50082916" side_tool="true" weight="0.32740587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -346,20 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -367,13 +423,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/php/php.ini" />
     <entry file="file://$PROJECT_DIR$/php/core/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -381,15 +431,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/app/models/Contacts.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/app/views/contacts/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/start-container">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/app/views/contacts/partials/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/app/controllers/ContactsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/core/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="73" column="84" selection-start-line="73" selection-start-column="84" selection-end-line="73" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/xdebug.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../moe-php-mysql-demo/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/app/views/contacts/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/core/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/core/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/app/views/layouts/main_manu.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/php/app/menu_acl.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/app/views/layouts/main_manu.php">
+    <entry file="file:///var/www/vhosts/cryptassets2thematic.net/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180" />
+        <state relative-caret-position="90">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/www/vhosts/cryptassets2thematic.net/public/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="107" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../docker-springframework/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ms18bthematic.net/php/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
       </provider>
     </entry>
   </component>

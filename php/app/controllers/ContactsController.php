@@ -22,4 +22,8 @@ class ContactsController extends Controller
 
         $this->view->render('contacts/index');
     }
+
+    public function addAction(){
+        $this->view->render('contacts/add');
+    }
 }

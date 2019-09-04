@@ -10,7 +10,7 @@ services:
     volumes:
       - ./php:/var/www/html/
     ports:
-      - 8088:80
+      - 8000:80
   db:
     container_name: mysql7
     image: mysql:5.7
@@ -26,10 +26,10 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: 'png-phpmyadmin'
-    depends_on:
-      - db
+    links:
+    - db
     environment:
-      PMA_HOST: db
+      PMA_HOST: mysql
       PMA_PORT: 3306
     ports:
     - '8085:80'
