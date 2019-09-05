@@ -7,6 +7,6 @@ RUN a2enmod rewrite
 
 RUN pecl install xdebug
 
-ADD ./php.ini /usr/local/etc/php/
+
 
 EXPOSE 80

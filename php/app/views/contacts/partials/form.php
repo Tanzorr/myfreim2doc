@@ -1,4 +1,4 @@
-<form action="<?=$this->postAction ?>" method="post" class="form">
+<form action="<?=$this->postAction;?>" method="post" class="form">
     <div class="form-errord"><?php echo $this->displayErrors;  ?></div>
     <?= inputBlok('text', 'Firs Name','fname', $this->contact->fname);?>
     <?= inputBlok('text', 'Last Name','lname', $this->contact->lname);?>
@@ -11,8 +11,8 @@
     <?= inputBlok('text', 'Cell Phone','cell_phone', $this->contact->fname);?>
     <?= inputBlok('text', 'Home Phone','home_phone', $this->contact->home_phone);?>
     <?= inputBlok('text', 'Work Phone','work_phone', $this->contact->word_phone);?>
-    <div class="text-right">
-        <a href="/" class="btn btn-primary"> contacts</a>
+    <div class="row">
+        <a href="/<?=PROOT?>/contacts" class="btn btn-primary"> contacts</a>
         <?= inputBlok('submit', '','submit','submit');?>
     </div>
 </form>

@@ -9,12 +9,26 @@
 class Contacts extends Model
 {
     public  $table='contacts';
+    public $deleted = 0;
 
     public function __construct($table)
     {
         parent::__construct($table);
-       // $this->_softDelete=true;
+        $this->_softDelete=true;
     }
+
+    public static $addValidation = [
+        'fname'=>[
+            'display'=>'First Name',
+            'required'=>true,
+            'max'=>155
+        ],
+        'lname'=>[
+            'display'=>'Last Name',
+            'required'=>true,
+            'max'=>155
+        ]
+    ];
 
     public function findByUserId($user_id, $params=[]){
         $conditions = [

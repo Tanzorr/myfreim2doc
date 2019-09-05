@@ -24,6 +24,22 @@ class ContactsController extends Controller
     }
 
     public function addAction(){
+        $contact = new Contacts('contacts');
+        $validation = new Validate();
+        if ($_POST){
+            $contact->assign($_POST);
+            $validation->check($_POST, Contacts::$addValidation);
+            if ($validation->passed()){
+                $contact->user_id = currentUser()->id;
+                $contact->deleted =0;
+                $contact->save();
+                Router::redirect('/contacts');
+            }
+
+        }
+        $this->view->contact = $contact;
+        $this->view->displayErrors = $validation->displayErrors();
+        $this->view->postAction = DS.PROOT.'contacts'.DS.'add';
         $this->view->render('contacts/add');
     }
 }
