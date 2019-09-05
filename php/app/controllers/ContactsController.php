@@ -42,4 +42,15 @@ class ContactsController extends Controller
         $this->view->postAction = DS.PROOT.'contacts'.DS.'add';
         $this->view->render('contacts/add');
     }
+
+    public function detailsAction($id){
+        $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
+
+        if (!$contact){
+            Router::redirect('/contacts');
+        }
+
+        $this->view = $contact;
+        $this->view->render('/contacts/details');
+    }
 }

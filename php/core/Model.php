@@ -55,13 +55,16 @@ class Model
         return $results;
     }
     public function findFirst($params = []) {
+
         $params = $this->_softDeleteParams($params);
-//        $resultQuery = $this->_db->findFirst($this->_table, $params,get_class($this));
-//        return $resultQuery;
+        //$resultQuery = $this->_db->findFirst($this->_table, $params,get_class($this));
+         //return $resultQuery;
         $resultQuery = $this->_db->findFirst($this->_table, $params);
         $result =  new  $this->_modelName($this->_table);
         if ($resultQuery){
             $result->populateObjData($resultQuery);
+        }else{
+            $result= false;
         }
         return $result;
     }

@@ -11,7 +11,11 @@
         <tbody>
             <?php foreach ($this->contacts as $contact): ?>
                 <tr>
-                    <td><?= $contact->displayName();?></td>
+                    <td>
+                        <a href="/contacts/details/<?=$contact->id?>">
+                            <?= $contact->displayName();?>
+                        </a>
+                    </td>
                     <td><?= $contact->email;?></td>
                     <td><?= $contact->cell_phone;?></td>
                     <td><?= $contact->home_phone;?></td>

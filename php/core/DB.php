@@ -63,6 +63,7 @@ class DB
     }
 
     protected function _read($table, $params=[]){
+
         $conditionString = '';
         $bind = [];
         $order='';
@@ -76,7 +77,7 @@ class DB
                     $conditionString .=' '. $condition . ' AND ';
                 }
                 $conditionString = trim($conditionString);
-                $conditionString = rtrim($conditionString,' AND');
+                $conditionString = rtrim($conditionString,' AND ');
             }else{
                 $conditionString =$params['conditions'];
             }
@@ -95,10 +96,12 @@ class DB
         }
         //limit
         if (array_key_exists('limit',$params)){
-            $order = " LIMIT ".$params['limit'];
+            $limit = " LIMIT ".$params['limit'];
         }
 
         $sql = "SELECT *FROM {$table}{$conditionString}{$order}{$limit}";
+
+      //  var_dump($sql);
 
         if ($this->query($sql,$bind)){
             if(!$this->count($this->_result)) return false;
@@ -110,6 +113,7 @@ class DB
 
 
     public  function find($table, $params){
+
         if ($this->_read($table, $params)){
             return $this->results();
         }
