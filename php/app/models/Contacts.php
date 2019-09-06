@@ -48,7 +48,7 @@ class Contacts extends Model
     public function findByIdAndUserId($contact_id, $user_id,$params=[]){
         $conditions = [
             'conditions'=>'id = ? AND user_id = ?',
-            'build'=>[$contact_id, $user_id]
+            'bind'=>[$contact_id, $user_id]
         ];
         $conditions = array_merge($conditions,$params);
         return $this->findFirst($conditions);

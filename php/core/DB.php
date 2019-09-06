@@ -87,7 +87,9 @@ class DB
            
         }
         //bind
+
         if(array_key_exists('bind',$params)){
+
             $bind = $params['bind'];
         }
         //order
@@ -100,8 +102,6 @@ class DB
         }
 
         $sql = "SELECT *FROM {$table}{$conditionString}{$order}{$limit}";
-
-      //  var_dump($sql);
 
         if ($this->query($sql,$bind)){
             if(!$this->count($this->_result)) return false;

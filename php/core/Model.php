@@ -59,7 +59,7 @@ class Model
         $params = $this->_softDeleteParams($params);
         //$resultQuery = $this->_db->findFirst($this->_table, $params,get_class($this));
          //return $resultQuery;
-        $resultQuery = $this->_db->findFirst($this->_table, $params);
+        $resultQuery = $this->_db->find($this->_table, $params);
         $result =  new  $this->_modelName($this->_table);
         if ($resultQuery){
             $result->populateObjData($resultQuery);
