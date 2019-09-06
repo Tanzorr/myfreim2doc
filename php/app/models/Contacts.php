@@ -54,4 +54,26 @@ class Contacts extends Model
         return $this->findFirst($conditions);
     }
 
+    public function displayAddres(){
+        $address = '';
+        if (!empty($this->address)){
+            $address .=$address.'<br>';
+        }
+        if (!empty($this->address2)){
+            $address .=$address.'<br>';
+        }
+
+        if (!empty($this->city)){
+            $address .=$this->city .', ';
+        }
+        $address .= $this->state. ' '.$this->zip. '<br>';
+        return $address;
+    }
+
+    public function displeyAddressLaabel(){
+        $html = $this->displayName() .'<br>';
+        $html .= $this->displayAddres();
+        return $html;
+    }
+
 }

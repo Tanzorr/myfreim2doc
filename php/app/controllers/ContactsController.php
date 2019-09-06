@@ -45,12 +45,12 @@ class ContactsController extends Controller
 
     public function detailsAction($id){
         $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
-        did($contact);
+
         if (!$contact){
             Router::redirect('/contacts');
         }
 
-        $this->view = $contact;
-        $this->view->render('/contacts/details');
+        $this->view->contact = $contact;
+        $this->view->render('contacts/datails');
     }
 }
