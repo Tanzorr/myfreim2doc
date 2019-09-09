@@ -100,8 +100,10 @@ class Router
             }
         }
 
+        //var_dump($grantAccess);
 
        return $grantAccess;
+
     }
 
     public static function getMenu($menu) {

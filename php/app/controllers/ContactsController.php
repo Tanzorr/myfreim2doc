@@ -53,4 +53,15 @@ class ContactsController extends Controller
         $this->view->contact = $contact;
         $this->view->render('contacts/datails');
     }
+
+    public function deleteAction($id){
+
+        $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
+
+
+        if ($contact) {
+           $contact->delete($id);
+        }
+        Router::redirect('/contacts');
+    }
 }
