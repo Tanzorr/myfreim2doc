@@ -62,7 +62,7 @@ class DB
         return $this;
     }
 
-    protected function _read($table, $params=[]){
+    protected function _read($table, $params=[], $class){
 
         $conditionString = '';
         $bind = [];
@@ -103,7 +103,7 @@ class DB
 
         $sql = "SELECT *FROM {$table}{$conditionString}{$order}{$limit}";
 
-        if ($this->query($sql,$bind)){
+        if ($this->query($sql,$bind, $class)){
             if(!$this->count($this->_result)) return false;
             return true;
         }
@@ -112,16 +112,16 @@ class DB
 
 
 
-    public  function find($table, $params){
+    public  function find($table, $params=[], $class = false){
 
-        if ($this->_read($table, $params)){
+        if ($this->_read($table, $params, $class)){
             return $this->results();
         }
         return false;
     }
 
-    public  function findFirst($table, $params=[]){
-        if ($this->_read($table, $fildes =[])){
+    public  function findFirst($table, $params=[],$class=false){
+        if ($this->_read($table, $fildes =[],$class)){
             return $this->first();
         }
         return false;

@@ -15,7 +15,7 @@ class Model
     {
         $this->_db = DB::getInstance();
         $this->_table = $table;
-        $this->_setTableColumns();
+
         $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
     }
 
