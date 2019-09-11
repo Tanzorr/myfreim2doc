@@ -20,9 +20,7 @@
                     <td><?= $contact->cell_phone;?></td>
                     <td><?= $contact->home_phone;?></td>
                     <td><?= $contact->city;?></td>
-                    <td>
-                        <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs">delete</a>
-                    </td>
+                    <td></td>
                 </tr>
             <?php endforeach; ?>    
         </tbody>
