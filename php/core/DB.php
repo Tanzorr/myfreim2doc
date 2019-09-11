@@ -62,7 +62,11 @@ class DB
         return $this;
     }
 
-    protected function _read($table, $params=[], $class){
+<<<<<<< HEAD
+    protected function _read($table, $params=[],$class){
+=======
+    protected function _read($table, $params=[]){
+>>>>>>> parent of 18391db... refactor db
 
         $conditionString = '';
         $bind = [];
@@ -103,7 +107,11 @@ class DB
 
         $sql = "SELECT *FROM {$table}{$conditionString}{$order}{$limit}";
 
-        if ($this->query($sql,$bind, $class)){
+<<<<<<< HEAD
+        if ($this->query($sql,$bind,$class)){
+=======
+        if ($this->query($sql,$bind)){
+>>>>>>> parent of 18391db... refactor db
             if(!$this->count($this->_result)) return false;
             return true;
         }
@@ -112,16 +120,20 @@ class DB
 
 
 
-    public  function find($table, $params=[], $class = false){
+<<<<<<< HEAD
+    public  function find($table, $params,$class=false){
+=======
+    public  function find($table, $params){
+>>>>>>> parent of 18391db... refactor db
 
-        if ($this->_read($table, $params, $class)){
+        if ($this->_read($table, $params)){
             return $this->results();
         }
         return false;
     }
 
-    public  function findFirst($table, $params=[],$class=false){
-        if ($this->_read($table, $fildes =[],$class)){
+    public  function findFirst($table, $params=[]){
+        if ($this->_read($table, $fildes =[])){
             return $this->first();
         }
         return false;

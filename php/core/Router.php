@@ -21,24 +21,28 @@ class Router
         $action_name = (isset($url[0]) && $url[0] != '')? $url[0] : 'index';
         array_shift($url);
 
+        //acl check
+        $grantAccess = self::hasAccess($controller_name, $action_name);
+
+
+
+        if (!$grantAccess ){
+            $controller_name = $controller = ACCESS_RESTRICTED;
+            $action = 'indexAction';
+        }
+
+
 
         //params
         $queryParams = $url;
        // $controller =  $controller;
         $dispatch = new $controller($controller_name, $action);
 
-        if(!method_exists($controller, $action)) {
+        if(method_exists($controller, $action)) {
+            call_user_func_array([$dispatch, $action], $queryParams);
+        } else {
             die('That method does not exist in the controller \"' . $controller_name . '\"');
         }
-
-        //acl check
-        $grantAccess = self::hasAccess($controller_name, $action_name);
-
-        if (!$grantAccess) {
-            $controller_name = $controller = ACCESS_RESTRICTED;
-            $action = 'indexAction';
-        }
-        call_user_func_array([$dispatch, $action], $queryParams);
     }
 
 
@@ -96,9 +100,9 @@ class Router
             }
         }
 
+        //var_dump($grantAccess);
 
        return $grantAccess;
-
     }
 
     public static function getMenu($menu) {
