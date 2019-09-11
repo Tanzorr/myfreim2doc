@@ -55,16 +55,16 @@ class Validate
                                     $this->addError(["{$display} alredy exist. Please choose another {$display}", $item]);
                                 }
 
-                            case 'unique_update':
-                                $t = explode(',', $rule_value);
-                                $table =  $t[0];
-
-                                $id = $t[1];
-                                $query =  $this->_db->query("SELECT *FROM {$table} WHERE  id !=? AND  {$item} = ?",[$id,$value]);
-                                if ($query->count()){
-                                    $this->addError(["{$display} already exist. Please chose another{$display}", $item]);
-                                }
-                                break;
+//                            case 'unique_update':
+//                                $t = explode(',', $rule_value);
+//                                $table =  $t[0];
+//
+//                                $id = $t[1];
+//                                $query =  $this->_db->query("SELECT *FROM {$table} WHERE  id !=? AND  {$item} = ?",[$id,$value]);
+//                                if ($query->count()){
+//                                    $this->addError(["{$display} already exist. Please chose another{$display}", $item]);
+//                                }
+//                                break;
                             case 'is_numeric':
                                 if (is_numeric($value)){
                                     $this->addError(["{$display} has to  be a numeric value .", $item]);

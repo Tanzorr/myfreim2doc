@@ -1,6 +1,6 @@
 <?php $this->start('header');?>
 <h2 class="text-center">My contacts</h2>
-    <table class="table table-striped table-condensed table-bordered table-hover">
+    <table class="table table-striped table-condensed table-bordered">
         <thead>
         <th>Name</th>
         <th>Email</th>
@@ -21,8 +21,7 @@
                     <td><?= $contact->home_phone;?></td>
                     <td><?= $contact->city;?></td>
                     <td>
-                        <a href="/contacts/edit/<?=$contact->id;?>" class="btn btn-info btn-xs">eit</a>
-                        <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs" onclick="if (!confirm('Are you sure that item')){confirm('Are you sure that item')}"> delete</a>
+                        <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs">delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>    

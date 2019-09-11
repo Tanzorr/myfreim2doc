@@ -4,14 +4,14 @@
     "Home":["*"],
     "Register": ["login", "register"],
     "Register":["*"]
-   },
+  },
   "LoggedIn": {
-     "denied":{
-       "Register": ["login","register"]
-     },
+    "denied":{
+      "Register": ["login","register"]
+    },
     "Register":["logout"],
     "Contacts":["*"]
 
-   }
+  }
 
 }
