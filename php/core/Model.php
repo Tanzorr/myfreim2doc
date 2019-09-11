@@ -14,6 +14,7 @@ class Model
     public function __construct($_table)
     {
         $this->_db = DB::getInstance();
+<<<<<<< HEAD
 
         $this->_table = $_table;
 
@@ -23,6 +24,12 @@ class Model
         $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
     }
 
+=======
+        $this->_table = $_table;
+        $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
+    }
+
+>>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
     public function get_columns()
     {
         return $this->_db->get_columns($this->_table);

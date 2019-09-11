@@ -21,12 +21,16 @@
                     <td><?= $contact->home_phone;?></td>
                     <td><?= $contact->city;?></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <td></td>
 =======
                     <td>
                         <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs">delete</a>
                     </td>
 >>>>>>> parent of 18391db... refactor db
+=======
+                    <td></td>
+>>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
                 </tr>
             <?php endforeach; ?>    
         </tbody>
