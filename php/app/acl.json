@@ -5,6 +5,7 @@
     "Register": ["login", "register"],
     "Register":["*"]
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "LoggedIn": {
     "denied":{
@@ -15,6 +16,8 @@
 
   }
 =======
+=======
+>>>>>>> parent of f4299f1... deleted ection
    },
   "LoggedIn": {
      "denied":{
@@ -24,6 +27,9 @@
     "Contacts":["*"]
 
    }
+<<<<<<< HEAD
+>>>>>>> parent of f4299f1... deleted ection
+=======
 >>>>>>> parent of f4299f1... deleted ection
 
 }
