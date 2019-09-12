@@ -8,12 +8,12 @@
 
 class Contacts extends Model
 {
-    public $_table='contacts';
+    public  $table='contacts';
     public $deleted = 0;
 
-    public function __construct()
+    public function __construct($table)
     {
-        parent::__construct($this->_table);
+        parent::__construct($table);
         $this->_softDelete=true;
     }
 

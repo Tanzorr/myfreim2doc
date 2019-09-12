@@ -1,24 +1,9 @@
 {
-<<<<<<< HEAD
   "Guest":{
     "denied":{},
     "Home":["*"],
     "Register": ["login", "register"],
     "Register":["*"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-  "LoggedIn": {
-    "denied":{
-      "Register": ["login","register"]
-    },
-    "Register":["logout"],
-    "Contacts":["*"]
-
-  }
-=======
-=======
->>>>>>> parent of f4299f1... deleted ection
    },
   "LoggedIn": {
      "denied":{
@@ -28,24 +13,5 @@
     "Contacts":["*"]
 
    }
-<<<<<<< HEAD
->>>>>>> parent of f4299f1... deleted ection
-=======
->>>>>>> parent of f4299f1... deleted ection
 
 }
-=======
-  "Guest" : {
-    "denied" : {},
-    "Home" : ["*"],
-    "Register" : ["login", "register"],
-    "Restricted" : ["*"]
-  },
-  "LoggedIn" : {
-    "denied" : {
-    },
-    "Register" : ["logout"],
-    "Contacts" : ["*"]
-  }
-}
->>>>>>> parent of 18391db... refactor db

@@ -21,9 +21,9 @@ class User extends Model
         $this->_modelName = 'User';
         if($user != '') {
             if(is_int($user)) {
-                $u = $this->_db->findFirst('users',['conditions'=>'id = ?', 'bind'=>[$user]],'User');
+                $u = $this->_db->findFirst('users',['conditions'=>'id = ?', 'bind'=>[$user]],'App\Models\Users');
             } else {
-                $u = $this->_db->findFirst('users', ['conditions'=>'username = ?','bind'=>[$user]],'User');
+                $u = $this->_db->findFirst('users', ['conditions'=>'username = ?','bind'=>[$user]],'App\Models\Users');
             }
             if($u) {
                 foreach($u as $key => $val) {

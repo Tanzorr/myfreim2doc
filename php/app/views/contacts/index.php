@@ -1,6 +1,6 @@
 <?php $this->start('header');?>
 <h2 class="text-center">My contacts</h2>
-    <table class="table table-striped table-condensed table-bordered">
+    <table class="table table-striped table-condensed table-bordered table-hover">
         <thead>
         <th>Name</th>
         <th>Email</th>
@@ -20,17 +20,10 @@
                     <td><?= $contact->cell_phone;?></td>
                     <td><?= $contact->home_phone;?></td>
                     <td><?= $contact->city;?></td>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <td></td>
-=======
                     <td>
-                        <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs">delete</a>
+                        <a href="/contacts/edit/<?=$contact->id;?>" class="btn btn-info btn-xs">eit</a>
+                        <a href="/contacts/delete/<?=$contact->id ?>" class="btn btn-danger btn-xs" onclick="if (!confirm('Are you sure that item')){confirm('Are you sure that item')}"> delete</a>
                     </td>
->>>>>>> parent of 18391db... refactor db
-=======
-                    <td></td>
->>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
                 </tr>
             <?php endforeach; ?>    
         </tbody>

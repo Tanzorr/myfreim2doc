@@ -62,15 +62,7 @@ class DB
         return $this;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    protected function _read($table, $params=[],$class){
-=======
     protected function _read($table, $params=[]){
->>>>>>> parent of 18391db... refactor db
-=======
-    protected function _read($table, $params=[],$class){
->>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
 
         $conditionString = '';
         $bind = [];
@@ -111,15 +103,7 @@ class DB
 
         $sql = "SELECT *FROM {$table}{$conditionString}{$order}{$limit}";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if ($this->query($sql,$bind,$class)){
-=======
         if ($this->query($sql,$bind)){
->>>>>>> parent of 18391db... refactor db
-=======
-        if ($this->query($sql,$bind,$class)){
->>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
             if(!$this->count($this->_result)) return false;
             return true;
         }
@@ -128,15 +112,7 @@ class DB
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public  function find($table, $params,$class=false){
-=======
     public  function find($table, $params){
->>>>>>> parent of 18391db... refactor db
-=======
-    public  function find($table, $params,$class=false){
->>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
 
         if ($this->_read($table, $params)){
             return $this->results();

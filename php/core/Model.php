@@ -8,28 +8,27 @@
  */
 class Model
 {
-    protected $_db, $_table,  $_modelName, $_softDelete = false;
+    protected $_db, $_table,  $_modelName, $_softDelete = false, $_columnNames = [];
     public $id;
 
-    public function __construct($_table)
+    public function __construct($table)
     {
         $this->_db = DB::getInstance();
-<<<<<<< HEAD
-
-        $this->_table = $_table;
-
-
+        $this->_table = $table;
         $this->_setTableColumns();
-
         $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
     }
 
-=======
-        $this->_table = $_table;
-        $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
+    public function _setTableColumns()
+    {
+        $columns = $this->get_columns();
+        foreach ($columns as $column) {
+            $columnName = $column->Field;
+            $this->_columnNames[] = $column->Field;
+            $this->{$columnName} = null;
+        }
     }
 
->>>>>>> 21431d4a9b4a5c3da1ec156028a0859312d60c58
     public function get_columns()
     {
         return $this->_db->get_columns($this->_table);
@@ -54,25 +53,35 @@ class Model
     public function find($params = [])
     {
         $params = $this->_softDeleteParams($params);
-        $resultsQuery = $this->_db->find($this->_table, $params, get_class($this));
-        return $resultsQuery;
+        $results = [];
+        $resultsQuery = $this->_db->find($this->_table, $params);
+        if (!$resultsQuery) return [];
+        foreach ($resultsQuery as $result) {
+            $obj = new $this->_modelName($this->_table);
+            $obj->populateObjData($result);
+            // var_dump($obj); die();
+            $results[] = $obj;
+        }
+        return $results;
     }
 
     public function findFirst($params = [])
     {
-        $params = $this->_softDeleteParams($params);
-        $resultQuery = $this->_db->findFirst($this->_table, $params,get_class($this));
-//        $result = $this->_db->find($this->_table, $params);
-//        //$result = new  $this->_modelName($this->_table);
-//
-//        if (!$result) {
-//            return false;
-//        }
-//
-//        $result = $result[0];
-      //  $this->populateObjData($result);
 
-        return $resultQuery;
+        $params = $this->_softDeleteParams($params);
+        //$result = $this->_db->findFirst($this->_table, $params,get_class($this));
+        //return $result;
+        $result = $this->_db->find($this->_table, $params);
+        //$result = new  $this->_modelName($this->_table);
+
+        if (!$result) {
+            return false;
+        }
+
+        $result = $result[0];
+        $this->populateObjData($result);
+
+        return $this;
     }
 
     public function findById($id)

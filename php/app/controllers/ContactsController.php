@@ -43,6 +43,29 @@ class ContactsController extends Controller
         $this->view->render('contacts/add');
     }
 
+    public function editAction($id){
+        $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
+
+        if (!$contact){Router::redirect('/contacts');}
+        $validation = new Validate();
+      // var_dump($_POST); die('vvnvnv');
+        if ($_POST){
+
+            $contact->assign($_POST);
+
+            $validation->check($_POST, Contacts::$addValidation);
+            if ($validation->passed()){
+                $contact->save();
+                Router::redirect('/contacts');
+            }
+
+        }
+        $this->view->displayErrors = $validation->displayErrors();
+        $this->view->contact = $contact;
+        $this->view->postAction = DS.PROOT.DS.'contacts'.DS.'edit'.DS.$contact->id;
+        $this->view->render('contacts/edit');
+    }
+
     public function detailsAction($id){
         $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
 
@@ -52,5 +75,16 @@ class ContactsController extends Controller
 
         $this->view->contact = $contact;
         $this->view->render('contacts/datails');
+    }
+
+    public function deleteAction($id){
+
+        $contact = $this->ContactsModel->findByIdAndUserId((int)$id,currentUser()->id);
+
+
+        if ($contact) {
+           $contact->delete($id);
+        }
+        Router::redirect('/contacts');
     }
 }
