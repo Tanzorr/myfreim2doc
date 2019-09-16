@@ -25,6 +25,7 @@ class ContactsController extends Controller
 
     public function addAction(){
         $contact = new Contacts('contacts');
+        
         $validation = new Validate();
         if ($_POST){
             $contact->assign($_POST);

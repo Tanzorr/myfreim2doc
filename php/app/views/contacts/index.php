@@ -13,7 +13,7 @@
                 <tr>
                     <td>
                         <a href="/contacts/details/<?=$contact->id?>">
-                            <?= $contact->displayName();?>
+                            <?= $contact->fname.' '.$contact->lname;?>
                         </a>
                     </td>
                     <td><?= $contact->email;?></td>

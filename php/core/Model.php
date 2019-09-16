@@ -15,19 +15,11 @@ class Model
     {
         $this->_db = DB::getInstance();
         $this->_table = $table;
-        $this->_setTableColumns();
+
         $this->_modelName = str_replace(' ', '', ucwords(str_replace('_', ' ', $this->_table)));
     }
 
-    public function _setTableColumns()
-    {
-        $columns = $this->get_columns();
-        foreach ($columns as $column) {
-            $columnName = $column->Field;
-            $this->_columnNames[] = $column->Field;
-            $this->{$columnName} = null;
-        }
-    }
+    
 
     public function get_columns()
     {

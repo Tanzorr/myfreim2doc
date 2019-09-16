@@ -1,11 +1,11 @@
-<?php  $this->setSiteTitle($this->contact->displayName()); ?>
+<?php  $this->setSiteTitle($this->contact->fname); ?>
 <?php $this->start('body');?>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <a href="/contacts" class="btn btn-default btn-xs">Back</a>
-            <h2 class="text-center"><?= $this->contact->displayName();?></h2>
+            <h2 class="text-center"><?= $this->contact->fname.' '.$this->contact->lname;?></h2>
             <div class="row">
                 <div class="col-md-6">
                     <p><span class="text-bold">Email:</span><?= $this->contact->email;?></p>
@@ -14,7 +14,8 @@
                     <p><span class="text-bold">Work phone:</span><?= $this->contact->word_phone;?></p>
                 </div>
                 <div class="col-md-6">
-                    <?=$this->contact->displeyAddressLaabel() ?>
+                    <?=$this->contact->adres1 ?>
+                    <?=$this->contact->adres2 ?>
                 </div>
             </div>
 
